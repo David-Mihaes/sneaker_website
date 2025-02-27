@@ -1,0 +1,258 @@
+/* | RESET | */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+}
+
+/* | VARIABLES | */
+
+:root {
+  /* FONT */
+  --ff-hd: 'Franklin Gothic Medium';
+  --ff: 'Times New Roman';
+  --fs: clamp(1.5rem, 2.5vh, 2rem);
+  /* COLOR */
+  --bg-color: white;
+  --bg-color-header: grey;
+  --bg-color-nav: white;
+  --link-color: black;
+  --link-color-hover: rgba(0, 0, 0, 0.505);
+  --link-color-active: white;
+  /* PADDING */
+  --padd-s: 0.5rem;
+  --padd-l: 1rem;
+  /* MARGIN */
+  --marg-s: 0.5rem;
+  --marg-l: 1rem;
+  /* BORDER */
+  --brdr: 2px solid  black;
+  --brdr-btn: 2px solid white;
+  --brdr-rd: 5px; 
+}
+
+/* | UTILITY CLASSES | */
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.center {
+  text-align: center;
+}
+
+/* | GENERAL STYLES | */
+
+html {
+  font-size: var(--fs);
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--ff);
+  background-color: var(--bg-color);
+  width: 100%;
+}
+h1, h2 {
+  font-family: var(--ff-hd);
+}
+p {
+  line-height: 1.5;
+}
+
+/* | CLASSES | */
+
+.header {
+  background-color: var(--bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: var(--padd-s);
+  border-bottom: var(--brdr);
+  box-shadow: 0px 0px 10px black ;
+  display: flex;
+  gap: 4rem;
+}
+.header__logo img:hover {
+  transform: scale(1.1, 1.1);
+}
+.header__nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5rem;
+}
+.header__nav a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.article {
+  position: relative;
+}
+.article__nike {
+  display: grid;
+  grid-template-columns: repeat(3, 0.3fr);
+  justify-content: center;
+  gap: 1rem;
+  background-color: hsl(0, 0%, 0%, 0.9);
+}
+.article__nike--block:hover {
+  box-shadow: 0px 0px 10px white;
+}
+.article__adidas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 1rem;
+  background-color: hsl(0, 0%, 0%, 0.9);
+}
+.article__adidas--block:hover {
+  box-shadow: 0px 0px 10px white;
+}
+.article__puma {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 1rem;
+  background-color: hsl(0, 0%, 0%, 0.9);
+}
+.article__puma--block:hover {
+  box-shadow: 0px 0px 10px white;
+}
+.article__converse {
+  display: grid;
+  grid-template-columns: repeat(6, 0.3fr);
+  justify-content: center;
+  gap: 1rem;
+  background-color: hsl(0, 0%, 0%, 0.9);
+}
+.article__converse--block:hover {
+  box-shadow: 0px 0px 10px white;
+}
+.article__reebok {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 1rem;
+  background-color: hsl(0, 0%, 0%, 0.9);
+}
+.article__reebok--block:hover {
+  box-shadow: 0px 0px 10px white;
+}
+
+
+.wings_sports {
+  position: relative;
+}
+/* .wings_sports {
+  display: grid;
+}
+.wings_sports > * {
+  grid-area: 1 / 1 / -1 / -1;
+} */
+.wings_sports__fig {
+  opacity: 0.8;
+}
+.wings_sports__h1 {
+  position: absolute;
+  color: #011d2d;
+  text-shadow: 3px 3px 10px white;
+  top: 10%;
+  left: 25%;
+  font-size: calc(var(--fs)*3);
+}
+.wings_sports__p {
+  width: 60ch;
+  position: absolute;
+  color: #011d2d;
+  top: 70%;
+  left: 15%;
+  font-size: var(--fs);
+  text-align: justify;
+  font-weight: 500;
+}
+
+.snkrs {
+  width: 100%;
+  margin-inline: auto;
+  padding: var(--padd-s);
+  display: flow-root;
+  scroll-margin-top: 4rem;
+}
+.snkrs__h2 {
+  text-align: center;
+  color: white;
+}
+.snkrs__p {
+  color: white;
+  text-align: justify;
+  margin-top: var(--marg-l);
+}
+.snkrs__btn {
+  font-size: 1.5rem;
+  border: var(--brdr-btn);
+  padding: var(--padd-s);
+  margin-top: var(--marg-l);
+  border-radius: 5px;
+}
+.snkrs__btn:hover {
+  transform: scale(1.05, 1.05);
+}
+.snkrs__btn a:any-link {
+  color: var(--bg-color);
+  text-decoration: none;
+}
+.snkrs__fig--left {
+  float: left;
+  margin: var(--marg-s);
+}
+.snkrs__fig--right {
+  float: right;
+  margin: var(--marg-s);
+}
+#nike {
+  background-color: #9b0527;
+}
+#adidas {
+  background-color: #0f325e;
+}
+#puma {
+  background-color: #1b1b1b;
+}
+#converse {
+  background-color: #1e2530;
+}
+#reebok {
+  background-color: #3d1a1e;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: black;
+  border-top: var(--brdr);
+  box-shadow: 0px 0px 10px black;
+  font-family: var(--ff-hd);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+}
